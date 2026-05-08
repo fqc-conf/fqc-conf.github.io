@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Test/build artefacts
+.playwright-mcp/
+*.log
+
+# Site preview screenshots (kept locally, not in repo)
+fqc-*.png
+
+# Unrelated working directories that happen to live in this folder.
+# This repo is the FQC workshop site only.
+ccg-parser/
+discoviz/
+eiso/
+hala/
+lambeq/
+mina/
+winoground/
