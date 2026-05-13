@@ -852,7 +852,8 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 }
 .org-list span {
   font-size: .95rem;
-  color: var(--text-mute);
+  font-weight: 500;
+  color: var(--text-soft);
   text-align: right;
 }
 @media (max-width: 600px) {
