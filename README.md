@@ -2,7 +2,7 @@
 
 Static one-page site for the **Fourth Conference on the Foundations of Quantum Computing**, University College London, 2–4 September 2026.
 
-(Note: editions 2023–2025 ran as workshops. The 2026 edition is the first held as a full conference, hence the rebrand in copy. The repo and GitHub Pages URL remain `fqc-workshop.github.io` for continuity.)
+(Note: editions 2023–2025 ran as workshops. The 2026 edition is the first held as a full conference — hence the rebrand in copy and the migration of the repo / GitHub Pages URL from `fqc-workshop.github.io` to `fqc-conf.github.io`. The old URL serves a meta-refresh redirect to the new one.)
 
 No build step, no framework, no JS dependencies. Three files do everything:
 
@@ -15,7 +15,7 @@ No build step, no framework, no JS dependencies. Three files do everything:
 └── README.md         <- this file
 ```
 
-Repo is the GitHub Pages source for **fqc-workshop.github.io** — served from `main` branch root, no Jekyll build.
+Repo is the GitHub Pages source for **fqc-conf.github.io** — served from `main` branch root, no Jekyll build.
 
 ## Local preview
 
@@ -67,13 +67,13 @@ I worked from the EventCreate page and filled in a few reasonable defaults. Plea
 - **Past-edition themes.** Host institutions and dates are verified against the EventCreate pages. The one-line "theme" descriptions next to each year are placeholder summaries — replace with the actual workshop themes if needed.
 - **Program day blurbs.** Currently placeholders ("Opening remarks, invited talks…"). Replace once finalized.
 - **Contact email.** Placeholder is `fqc2026@cs.ucl.ac.uk`. Update in two places — the `mailto:` link in the contact section and any future `og:url`.
-- **Open Graph URL.** `<meta property="og:url">` points at `https://fqc2026.cs.ucl.ac.uk/` — update to the real public URL (likely `https://fqc-workshop.github.io/` or a custom domain).
+- **Open Graph URL.** `<meta property="og:url">` is set to `https://fqc-conf.github.io/` (the GitHub Pages URL). Update if a custom domain is added.
 - **Hosting / sponsors / acknowledgements.** Footer currently has no hosting credit — add the correct host attribution once confirmed.
 - **Partner / sponsor logos.** The Partners section (`#partners`) currently shows institution names as text placeholders. To swap in a real logo, replace the `<span class="logo-placeholder">…</span>` inside each `<a class="logo-tile">` with an `<img src="assets/logos/ucl.svg" alt="" />` (file in `assets/logos/`). Recommended: SVG, monochrome, ~200 px wide. Add sponsor `<li>` rows under the "Sponsors" group as they're confirmed.
 
 ## Deploying
 
-GitHub Pages serves this repo (`fqc-workshop.github.io`) from `main` branch root. To publish:
+GitHub Pages serves this repo (`fqc-conf.github.io`) from `main` branch root. To publish:
 
 ```bash
 git add -A
