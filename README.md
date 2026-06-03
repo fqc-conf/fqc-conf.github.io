@@ -1,6 +1,8 @@
-# FQC 2026 — workshop site
+# FQC 2026 — conference site
 
-Static one-page site for the **Fourth Workshop on the Foundations of Quantum Computing**, University College London, 2–4 September 2026.
+Static one-page site for the **Fourth Conference on the Foundations of Quantum Computing**, University College London, 2–4 September 2026.
+
+(Note: editions 2023–2025 ran as workshops. The 2026 edition is the first held as a full conference, hence the rebrand in copy. The repo and GitHub Pages URL remain `fqc-workshop.github.io` for continuity.)
 
 No build step, no framework, no JS dependencies. Three files do everything:
 
@@ -61,7 +63,7 @@ The `assets/` folder is already created. Photos crop to `4 / 5` aspect — suppl
 I worked from the EventCreate page and filled in a few reasonable defaults. Please double-check:
 
 - **Venue photo.** The repo includes `assets/ucl-portico.jpg` (Wilkins Portico, Bloomsbury). It is NOT used on the page because the actual venue is UCL School of Management at One Canada Square, Canary Wharf — the portico is the wrong building and would mislead attendees. Either delete the asset, or supply a One Canada Square / Canary Wharf photo to put in the venue section.
-- **Speaker spellings & affiliations.** I corrected *Lucian → Lucien* Hardy, and listed *Maria Schuld — Xanadu*. Verify both.
+- **Speaker spellings & affiliations.** I corrected *Lucian → Lucien* Hardy. Verify.
 - **Past-edition themes.** Host institutions and dates are verified against the EventCreate pages. The one-line "theme" descriptions next to each year are placeholder summaries — replace with the actual workshop themes if needed.
 - **Program day blurbs.** Currently placeholders ("Opening remarks, invited talks…"). Replace once finalized.
 - **Contact email.** Placeholder is `fqc2026@cs.ucl.ac.uk`. Update in two places — the `mailto:` link in the contact section and any future `og:url`.
