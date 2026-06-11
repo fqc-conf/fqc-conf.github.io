@@ -2,20 +2,27 @@
 
 Static one-page site for the **Fourth Conference on the Foundations of Quantum Computing**, University College London, 2–4 September 2026.
 
-(Note: editions 2023–2025 ran as workshops. The 2026 edition is the first held as a full conference — hence the rebrand in copy and the migration of the repo / GitHub Pages URL from `fqc-workshop.github.io` to `fqc-conf.github.io`. The old URL serves a meta-refresh redirect to the new one.)
+> Editions 2023–2025 ran as *workshops*. The 2026 edition is the first held as a full *conference* — hence the rebrand in copy and the move of the repo / GitHub Pages URL from `fqc-workshop.github.io` to `fqc-conf.github.io`. The old URL serves a meta-refresh redirect to the new one.
 
-No build step, no framework, no JS dependencies. Three files do everything:
+No build step, no framework, no JS dependencies. The whole site is a handful of files:
 
 ```
 .
-├── index.html        <- content + structure
-├── style.css         <- everything visual
-├── script.js         <- mobile nav + scroll reveal
-├── assets/           <- speaker photos etc. (currently empty)
-└── README.md         <- this file
+├── index.html                  <- all content + page structure
+├── style.css                   <- everything visual
+├── script.js                   <- mobile nav + scroll-reveal animations
+├── robots.txt                  <- search-engine crawl rules
+├── sitemap.xml                 <- single-URL sitemap for Google
+├── google…verification.html    <- Google Search Console ownership proof (do not delete)
+├── assets/
+│   ├── speakers/               <- speaker portraits
+│   ├── logos/                  <- partner / sponsor logos
+│   ├── ucl-portico.jpg         <- UCL Bloomsbury building (used as social-share image)
+│   └── canary-wharf.jpg        <- Canary Wharf / actual venue area (currently unused)
+└── README.md
 ```
 
-Repo is the GitHub Pages source for **fqc-conf.github.io** — served from `main` branch root, no Jekyll build.
+The repo **is** the GitHub Pages source for **fqc-conf.github.io** — served from the `main` branch root, no Jekyll build.
 
 ## Local preview
 
@@ -24,80 +31,103 @@ python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
-Any static server works (`npx serve`, `php -S`, etc.) — there's nothing to compile.
+Any static server works (`npx serve`, `php -S localhost:8080`, etc.) — there's nothing to compile.
 
 ## Editing content
 
-Everything text-y lives in `index.html`. Sections are clearly labelled with comments / headings:
+All text lives in `index.html`. Each section has an `id` and a labelled heading, so search the file for the section name. The most-edited sections:
 
-| Section          | Where to edit                                  |
-| ---------------- | ---------------------------------------------- |
-| Hero / dates     | `<section class="hero">`                       |
-| About            | `<section id="about">`                         |
-| Speakers         | `<ul class="speaker-grid">` — one `<li>` each  |
-| Program          | `<ol class="day-list">`                        |
-| Application      | `<section id="register">` + `.dates-strip`     |
-| Organizers       | `<ul class="org-list">`                        |
-| Venue            | `<section id="venue">`                         |
-| Past editions    | `<ol class="past-list">`                       |
-| Contact          | `<section id="contact">` (`mailto:` link)      |
+| Section                | Where to edit                                              |
+| ---------------------- | --------------------------------------------------------- |
+| Hero / dates           | `<section class="hero">`                                  |
+| About                  | `<section id="about">`                                    |
+| Speakers               | `<ul class="speaker-grid">` — one `<li class="speaker">` each |
+| Program                | `<section id="program">` → `<ol class="day-list">`        |
+| Venue                  | `<section id="venue">`                                     |
+| Register / fees / dates| `<section id="register">`                                 |
+| Organisers             | `<section id="organisers">` → `<ul class="org-list">`     |
+| Past editions          | `<section id="past">` → `<ol class="past-list">`          |
+| Partners / sponsors    | `<section id="partners">` → `<a class="logo-tile">` tiles |
+| Contact                | `<section id="contact">` (`mailto:` link, currently hidden)|
 
-### Adding a real speaker photo
+### Adding or changing a speaker
 
-Replace the placeholder block in a speaker `<li>`:
-
-```html
-<div class="speaker-portrait" aria-hidden="true"><span>SA</span></div>
-```
-
-with:
+Each speaker is one `<li class="speaker">` in a `<ul class="speaker-grid">` (there are two grids: an *Academic session* and an *Industry session*). The portrait, name, and affiliation are the three things to set:
 
 ```html
-<img class="speaker-portrait" src="assets/abramsky.jpg" alt="" />
+<li class="speaker">
+  <div class="speaker-portrait" aria-hidden="true">
+    <img src="assets/speakers/jane-doe.jpg" alt="" loading="lazy" />
+  </div>
+  <h3><a class="speaker-link" href="https://example.org/" target="_blank" rel="noopener">Jane Doe<span class="speaker-arrow" aria-hidden="true">↗</span></a></h3>
+  <p class="affil">Some University</p>
+</li>
 ```
 
-The `assets/` folder is already created. Photos crop to `4 / 5` aspect — supply 800×1000 ish.
+- Portraits crop to a `4 / 5` aspect ratio — supply roughly **800×1000 px** JPG/PNG and drop it in `assets/speakers/`.
+- Omit the `<a>` wrapper if the speaker has no homepage — just put the bare name in `<h3>`.
+- Mark a still-unconfirmed speaker by adding `<span class="tbc">TBC</span>` after the name.
+- **Keep the JSON-LD in sync:** the `<script type="application/ld+json">` block in `<head>` lists every speaker under `"performer"`. Add/remove names there when you change the speaker grid (see *SEO* below).
 
-## Things you should verify before going live
+### Adding a partner or sponsor logo
 
-I worked from the EventCreate page and filled in a few reasonable defaults. Please double-check:
+Partner/sponsor tiles live in `<section id="partners">`. A real logo tile looks like:
 
-- **Venue photo.** The repo includes `assets/ucl-portico.jpg` (Wilkins Portico, Bloomsbury). It is NOT used on the page because the actual venue is UCL School of Management at One Canada Square, Canary Wharf — the portico is the wrong building and would mislead attendees. Either delete the asset, or supply a One Canada Square / Canary Wharf photo to put in the venue section.
-- **Speaker spellings & affiliations.** I corrected *Lucian → Lucien* Hardy. Verify.
-- **Past-edition themes.** Host institutions and dates are verified against the EventCreate pages. The one-line "theme" descriptions next to each year are placeholder summaries — replace with the actual workshop themes if needed.
-- **Program day blurbs.** Currently placeholders ("Opening remarks, invited talks…"). Replace once finalized.
-- **Contact email.** Placeholder is `fqc2026@cs.ucl.ac.uk`. Update in two places — the `mailto:` link in the contact section and any future `og:url`.
-- **Open Graph URL.** `<meta property="og:url">` is set to `https://fqc-conf.github.io/` (the GitHub Pages URL). Update if a custom domain is added.
-- **Hosting / sponsors / acknowledgements.** Footer currently has no hosting credit — add the correct host attribution once confirmed.
-- **Partner / sponsor logos.** The Partners section (`#partners`) currently shows institution names as text placeholders. To swap in a real logo, replace the `<span class="logo-placeholder">…</span>` inside each `<a class="logo-tile">` with an `<img src="assets/logos/ucl.svg" alt="" />` (file in `assets/logos/`). Recommended: SVG, monochrome, ~200 px wide. Add sponsor `<li>` rows under the "Sponsors" group as they're confirmed.
+```html
+<a class="logo-tile" href="https://example.org/" target="_blank" rel="noopener">
+  <img src="assets/logos/example.png" alt="" loading="lazy" />
+  <span class="logo-tile-name">Example Institution</span>
+</a>
+```
+
+Sponsors currently show a single `logo-tile-empty` placeholder ("Sponsor logos to be added") — replace it with real tiles as sponsors are confirmed. Logos look best as monochrome SVG/PNG, ~200 px wide.
+
+## SEO & Google Search Console
+
+The site is set up to be indexed by Google:
+
+- **`robots.txt`** allows all crawlers and points to the sitemap.
+- **`sitemap.xml`** lists the single homepage URL. Update `<lastmod>` when you make significant content changes.
+- **`<head>` of `index.html`** contains a JSON-LD `Event` block (Google reads this to show a rich event card with dates, venue, fee, and speakers), plus a canonical URL, Open Graph, and Twitter-card tags.
+- **Ownership** is verified in [Google Search Console](https://search.google.com/search-console) as a **URL-prefix** property for `https://fqc-conf.github.io/`, via the `google…verification.html` file in the repo root. **Do not delete that file** — removing it un-verifies the property. (Domain-property verification is not possible because we don't control DNS for `github.io`.)
+
+After editing structured data or major content, open the property in Search Console → **URL Inspection** → enter the homepage → **Request Indexing**, so Google re-crawls promptly instead of waiting.
+
+> **Known issue — social/search preview image.** `og:image`, `twitter:image`, and the JSON-LD `image` all point to `assets/ucl-portico.jpg`, which is the UCL Wilkins Portico in Bloomsbury — *not* the actual venue (UCL School of Management, One Canada Square, Canary Wharf). Consider swapping in a Canary Wharf image (`assets/canary-wharf.jpg` is already in the repo) so the share preview shows the right place. Update all three references in `<head>` if you do.
+
+## Still to confirm before / during the event
+
+- **TBC speakers.** Peter Coveney and Masoud Mohseni are marked `TBC` — remove the tag once confirmed, or remove the speaker if they drop.
+- **Program day blurbs.** Check the per-day descriptions in `<section id="program">` are final.
+- **Past-edition themes.** The one-line theme next to each past year in `<section id="past">` — verify or update.
+- **Sponsor logos.** Replace the sponsor placeholder once sponsors are confirmed.
+- **Contact email.** The contact section uses `mailto:fqc2026@cs.ucl.ac.uk` and is currently `hidden`. Update the address and unhide the section (`<section id="contact" … hidden>` → remove `hidden`) if you want it shown.
 
 ## Deploying
 
-GitHub Pages serves this repo (`fqc-conf.github.io`) from `main` branch root. To publish:
+GitHub Pages serves this repo from the `main` branch root. The git remote uses **SSH** (`git@github.com:fqc-conf/fqc-conf.github.io.git`), so you need an SSH key on your GitHub account with push access. To publish:
 
 ```bash
 git add -A
 git commit -m "Update site"
-git push origin main
+git push
 ```
 
-Pages picks it up within a minute or two. No build step.
+Pages rebuilds and serves the change within a minute or two — there is no build step.
 
-For a custom domain, add a `CNAME` file at the repo root with the bare domain inside, then point DNS at GitHub Pages' IPs (see [docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)).
+For a **custom domain**: add a `CNAME` file at the repo root containing the bare domain, point DNS at GitHub Pages ([docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)), and update `og:url`, `canonical`, the sitemap URL, and the JSON-LD `url`/`offers.url` in `index.html` to match.
 
 ## Browser support
 
 - Modern evergreen browsers (Chrome, Firefox, Safari, Edge — last 2 versions). Tested at 390 px (phone), 820 px (tablet), 1440 px and 1920 px (desktop).
-- Reveal animations gracefully degrade (everything visible) if JS or `IntersectionObserver` is unavailable.
-- Honours `prefers-reduced-motion`.
-- Backdrop-filter blur on the sticky header degrades to a solid translucent fill in older browsers.
+- Scroll-reveal animations gracefully degrade (everything stays visible) if JS or `IntersectionObserver` is unavailable, and honour `prefers-reduced-motion`.
+- The sticky header's backdrop blur falls back to a solid translucent fill in older browsers.
 
 ## Design notes
 
 - **Type:** Fraunces (display serif) for headlines, Inter for body, JetBrains Mono for labels — all from Google Fonts.
-- **Palette:** `#0a0e27` ink, `#f6f4ee` warm paper, `#4cc6f0` cyan accent. CSS custom properties at the top of `style.css` — change once, propagates everywhere.
-- **Layout grid:** content max width 1200 px, gutter `clamp(1.25rem, 3vw, 2.5rem)`. Section vertical rhythm `clamp(4.5rem, 10vw, 8rem)`.
-- The hero's three "orbit" rings are decorative (CSS only, no images). Disable by removing the three `.orbit` divs.
+- **Palette & spacing:** defined as CSS custom properties at the top of `style.css` — change them once and they propagate everywhere.
+- The hero's three "orbit" rings are pure CSS decoration (no images); remove the three `.orbit` divs to disable them.
 
 ## Licence
 
