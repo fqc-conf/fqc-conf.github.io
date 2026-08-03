@@ -764,6 +764,8 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   color: var(--paper);
   padding: .9rem 1.35rem;
 }
+.agenda-day.is-industry .agenda-day-head { background: var(--accent-2); }
+.agenda-day.is-industry .agenda-day-tag { color: #fff; opacity: .92; }
 .agenda-day-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
 .agenda-day-tag {
   font-family: var(--mono);
@@ -870,12 +872,15 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 @media (max-width: 640px) {
   .ag-row,
   .ag-talk > summary {
-    grid-template-columns: 68px 1fr auto;
-    gap: .45rem .8rem;
-    padding: .8rem 1rem;
+    grid-template-columns: 1fr;
+    gap: .2rem;
+    padding: .85rem 2.4rem .85rem 1rem;
+    position: relative;
   }
-  .ag-theme { grid-column: 2; align-self: start; margin-top: .1rem; }
-  .ag-body { padding-left: calc(68px + .8rem + 1rem); padding-right: 1rem; }
+  .ag-time { font-size: .72rem; }
+  .ag-theme { align-self: start; margin-top: .1rem; }
+  .ag-chevron { position: absolute; right: 1.1rem; top: 1.15rem; }
+  .ag-body { padding: 0 1rem 1.1rem 1rem; }
   .agenda-day-head { padding: .8rem 1rem; }
 }
 
