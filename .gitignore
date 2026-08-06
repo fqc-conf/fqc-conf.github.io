@@ -25,6 +25,10 @@ lightning-talks.md
 # link, so the IDs are effectively secrets — keep them out of a public repo.
 sync-hackmd.sh
 
+# Internal design/spec notes — describe infrastructure and where personal data
+# lives. This repo is served publicly, so these must not be published.
+docs/superpowers/
+
 # Unrelated working directories that happen to live in this folder.
 # This repo is the FQC workshop site only.
 ccg-parser/
