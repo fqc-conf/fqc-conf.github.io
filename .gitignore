@@ -21,6 +21,10 @@ linkedin-carousel/
 talks-abstracts.md
 lightning-talks.md
 
+# Organising checklist — names speakers' accommodation and attendees' dietary
+# needs, and is not public-facing. Keep it local alongside the docs above.
+TODO.md
+
 # Contains the HackMD note IDs. Those notes are readable by anyone with the
 # link, so the IDs are effectively secrets — keep them out of a public repo.
 sync-hackmd.sh

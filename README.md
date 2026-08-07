@@ -80,7 +80,7 @@ Partner/sponsor tiles live in `<section id="partners">`. A real logo tile looks 
 </a>
 ```
 
-Sponsors currently show a single `logo-tile-empty` placeholder ("Sponsor logos to be added") — replace it with real tiles as sponsors are confirmed. Logos look best as monochrome SVG/PNG, ~200 px wide.
+Sponsors currently show a single real tile (Quantinuum) — add further tiles as sponsors are confirmed. Logos look best as monochrome SVG/PNG, ~200 px wide.
 
 ## SEO & Google Search Console
 
@@ -93,14 +93,14 @@ The site is set up to be indexed by Google:
 
 After editing structured data or major content, open the property in Search Console → **URL Inspection** → enter the homepage → **Request Indexing**, so Google re-crawls promptly instead of waiting.
 
-> **Known issue — social/search preview image.** `og:image`, `twitter:image`, and the JSON-LD `image` all point to `assets/ucl-portico.jpg`, which is the UCL Wilkins Portico in Bloomsbury — *not* the actual venue (UCL School of Management, One Canada Square, Canary Wharf). Consider swapping in a Canary Wharf image (`assets/canary-wharf.jpg` is already in the repo) so the share preview shows the right place. Update all three references in `<head>` if you do.
+**Social/search preview image.** `og:image`, `twitter:image`, and the JSON-LD `image` all point to `assets/og-card.jpg` — a branded 1200×630 card (the Open Graph standard size) rendered from the site's own type and palette over a heavily darkened Canary Wharf skyline. It replaced `assets/ucl-portico.jpg`, which showed the Bloomsbury portico rather than the actual venue. Keep all three references in sync if you change it, and note that LinkedIn caches aggressively — use their [Post Inspector](https://www.linkedin.com/post-inspector/) to force a refresh.
 
 ## Still to confirm before / during the event
 
-- **TBC speakers.** Peter Coveney and Masoud Mohseni are marked `TBC` — remove the tag once confirmed, or remove the speaker if they drop.
+- **Unconfirmed talks.** Gorgulla & Ghazi Vakili still show "Title to be confirmed" on Day 3, and Day 1 has an unfilled "Invited talk — to be confirmed" slot at 14.45. No speaker in the grid is marked `TBC`.
 - **Program day blurbs.** Check the per-day descriptions in `<section id="program">` are final.
 - **Past-edition themes.** The one-line theme next to each past year in `<section id="past">` — verify or update.
-- **Sponsor logos.** Replace the sponsor placeholder once sponsors are confirmed.
+- **Sponsor logos.** Quantinuum is the only sponsor tile — add others as they are confirmed.
 - **Contact email.** The contact section uses `mailto:fqc2026@cs.ucl.ac.uk` and is currently `hidden`. Update the address and unhide the section (`<section id="contact" … hidden>` → remove `hidden`) if you want it shown.
 
 ## Deploying
