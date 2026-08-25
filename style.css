@@ -1000,17 +1000,8 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   transition: color .2s var(--ease);
 }
 .partners-note a:hover { color: var(--accent); }
-.supported-by {
-  margin: 1rem 0 0;
-}
-.supported-by a {
-  color: var(--text-soft);
-  text-decoration: underline;
-  text-underline-offset: .18em;
-  text-decoration-color: var(--line);
-  transition: text-decoration-color .25s var(--ease), color .25s var(--ease);
-}
-.supported-by a:hover { color: var(--accent-2); text-decoration-color: currentColor; }
+/* same treatment as .partners-note, but sits below the grid it refers to */
+.supported-by { margin: clamp(1.25rem, 2.5vw, 1.75rem) 0 0; }
 
 .org-list + .org-group-title,
 .speaker-grid + .org-group-title { margin-top: clamp(2.25rem, 4vw, 3rem); }
