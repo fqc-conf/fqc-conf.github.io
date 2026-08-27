@@ -896,6 +896,16 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .ag-break .ag-main { font-style: italic; color: var(--text-mute); }
 .ag-event { background: var(--paper-2); }
 .ag-event .ag-main { color: var(--ink); font-weight: 500; }
+.ag-venue {
+  display: block;
+  font-family: var(--mono);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--text-soft);
+  margin-top: .3rem;
+}
+
 .ag-soft { color: var(--text-mute); font-weight: 400; }
 
 @media (max-width: 640px) {
