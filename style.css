@@ -1290,6 +1290,16 @@ a.past-where:hover .past-arrow { color: var(--accent); transform: translate(2px,
 }
 .contact-mail:hover { color: var(--accent); }
 
+.venue-sub-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -.015em;
+  color: var(--ink);
+  margin: 0;
+}
+.venue-grid + .venue-grid { margin-top: clamp(2.5rem, 5vw, 4rem); }
+
 .address {
   font-family: var(--mono);
   font-size: .92rem;
