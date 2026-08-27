@@ -518,7 +518,64 @@
           </details>
 
           <div class="ag-row ag-break"><span class="ag-time">11.30&ndash;12.00</span><span class="ag-main">Coffee break</span></div>
-          <div class="ag-row ag-break"><span class="ag-time">12.00&ndash;12.30</span><span class="ag-main">Lightning talk session 2</span></div>
+          
+          <details class="ag-talk">
+  <summary>
+    <span class="ag-time">12.00&ndash;12.30</span>
+    <span class="ag-main">
+      <span class="ag-who">
+        <span class="ag-name">Lightning talk session 2</span>
+      </span>
+      <span class="ag-title">Tensor Networks, Simulation &amp; Quantum Algorithms</span>
+    </span>
+    <span class="ag-chevron" aria-hidden="true"></span>
+  </summary>
+
+  <div class="ag-body">
+
+    <details>
+      <summary><strong>12.00&ndash;12.05 &nbsp; Naivasha Williams</strong> &nbsp; <span class="ag-aff">UCL</span></summary>
+      <p><strong>Hermitian Matrix Product Operators on Quantum Computers</strong></p>
+      <p>MPOs are nonunitary; current state-of-the-art methods favour block-encoding for implementation. However, utility is limited by circuit depth and ancilla overhead on current hardware. We propose a new, more hardware efficient implementation of Hermitian MPOs and show that both circuit width and depth are significantly reduced for the Transverse Field Ising Model.</p>
+    </details>
+
+    <details>
+      <summary><strong>12.05&ndash;12.10 &nbsp; Ivan Shalashilin</strong> &nbsp; <span class="ag-aff">UCL</span></summary>
+      <p><strong>Boosting Quantum Classifiers with Tensor Networks</strong></p>
+      <p>Tensor networks, originally developed in quantum physics to describe many-body systems, have recently attracted interest in classical and quantum machine learning, following the seminal work of Stoudenmire and Schwab. One application is classification: encoding image data as matrix product states (MPS) with fixed bond dimension yields a shallow, low-qubit-count multiclass quantum classifier.</p>
+      <p>We propose a classifier that reframes binary classification as a quantum state discrimination problem, in which the goal is to find the optimal observable for distinguishing two quantum states. Each class is encoded as a normalized density matrix—the weighted average of its constituent datastates—and the optimal observable is obtained by diagonalising the difference between the two class density matrices. Accuracy is improved by iteratively reweighting the density matrices, in a manner similar to AdaBoost or SVMs, and multiclass problems are handled via a one-vs-rest scheme. Since the classifier requires no loss function or gradient-based optimisation, it sidesteps trainability issues such as barren plateaus.</p>
+      <p>Diagonalization is performed efficiently using a tensor-network Lanczos algorithm, and we show that most of the classifier's performance is captured by a truncated observable built from the largest-weight eigenvectors. Because the data is MPS-encoded, the classifier naturally takes the form of a matrix product operator (MPO), whose bond dimension can be truncated to trade off accuracy for efficiency.</p>
+      <p>We further extend our boosting approach to stacking, training a new classifier on the outputs of several MPO classifiers. This approach achieves 99.25%/98.5% train/test accuracy on standard MNIST handwritten digits using just 8 qubits.</p>
+      <p>We also report inference results on the IBM Heron quantum computer at the NQCC, achieving &gt;96% test accuracy on a 4 class MNIST batch using circuits with O(100-1000) depth and two qubit gate count.</p>
+    </details>
+
+    <details>
+      <summary><strong>12.10&ndash;12.15 &nbsp; Freddie Burns</strong> &nbsp; <span class="ag-aff">UCL</span></summary>
+      <p><strong>Mean-field ansätze for quantum selected configuration interaction</strong></p>
+      <p>Sampling algorithms aim to find subspaces of a Hamiltonian that yield accurate eigenvalues by measuring an ansatz many times. These ansätze should be complete, covering the target support; precise, covering only the target support; efficient, requiring few shots; and shallow, reducing the effect of noise in NISQ devices. This work pools measurements from an ensemble of ansätze, each produced by encoding a spin-broken mean-field determinant, rotating into a spin-pure basis, and projecting into a target spin state. We benchmark against IBM’s LUCJ ansatz on small hydrogen systems, in both simulation and on hardware, showing shallower circuits and improved sampling efficiency while retaining full ground-state support.</p>
+    </details>
+
+    <details>
+      <summary><strong>12.15&ndash;12.20 &nbsp; Amana Liaqat</strong> &nbsp; <span class="ag-aff">Qoro Quantum</span></summary>
+      <p><strong>Scaling Parallelised Sample Based Quantum Diagonalization Using Divi</strong></p>
+      <p>SQD uses quantum circuits as stochastic samplers to bypass classical bottlenecks. To simulate large molecules, our Divi software parallelizes LASSQD workloads across QPUs by fragmenting the Hamiltonian and running configuration recovery. We demonstrate processing a molecule previously too large for these methods using this fragmented approach, and highlight past work accelerating QAOA sampling.</p>
+    </details>
+
+    <details>
+      <summary><strong>12.20&ndash;12.25 &nbsp; George Umbrarescu</strong> &nbsp; <span class="ag-aff">UCL</span></summary>
+      <p><strong>SyQMA: A memory-efficient, symbolic and exact universal simulator for quantum error correction</strong></p>
+      <p>The classical simulation of universal quantum circuits is crucial both fundamentally and practically for quantum computation. We propose SyQMA, a simulator with several convenient features, particularly suited for quantum error correction (QEC). SyQMA simulates universal quantum circuits with incoherent Pauli noise and computes exact expectation values and measurement probabilities as symbolic functions of circuit parameters: rotation angles, measurement outcomes, and noise rates. This simulator can sample measurement outcomes, enabling the simulation of dynamic quantum programs where circuit composition depends on prior measurement outputs. For QEC, it performs circuit-level maximum-likelihood decoding, provides exact symbolic expressions for logical error rates, and verifies the fault distance of fault-tolerant stabiliser and magic state preparation protocols. These features are enabled by an intuitive extension of stabiliser simulators, where each non-Clifford Pauli rotation and incoherent Pauli channel is compactly represented via auxiliary qubits and a modified trace. Representing the state requires only polynomial memory and time, while computing expectation values and measurement probabilities takes exponential time in the number of non-Clifford rotations and deterministic measurements, but only polynomial memory. The FT preparation of stabiliser and magic states, including the first stage of magic state cultivation, is analysed without approximations. We also exactly convert the disjoint error probabilities of a general multi-qubit Pauli channel to independent ones, a key step for creating and sampling from detector error models. The code is publicly available and open-source.</p>
+    </details>
+
+    <details>
+      <summary><strong>12.25&ndash;12.30 &nbsp; Amir Alizadeh</strong></summary>
+      <p><strong>Energy-Aware and Scalable Classical Baselines for QAOA: A Measured FPGA State Vector Simulator</strong></p>
+      <p>Assessing the practical performance of the Quantum Approximate Optimisation Algorithm (QAOA) requires strong classical simulation baselines. Such baselines are typically characterised by runtime and memory requirements, while their energy cost receives substantially less attention. This work presents a measured FPGA-based state vector simulator specialised to the structure of QAOA and evaluates energy alongside computational performance. Rather than emulating arbitrary quantum gates, the architecture maps QAOA quantum part onto regular read–compute–write sweeps over a BRAM-resident state vector using a time-multiplexed fixed-point datapath. One structural optimisation exploits the exact invariance of the cost evolution under (H_C, gamma) -&gt; (H_C/c, c * gamma). By rescaling the cost values on the host and representing the resulting phase in turns rather than radians, O(2^n) range reduction on the FPGA reduces to fractional-bit selection. Thus, an algebraic property of QAOA removes the need for a dedicated range reduction arithmetic block. The prototype runs at 320 MHz on a 28 nm Stratix V, validated against Qiskit Aer on Max Cut up to 16 qubits and 32 layers. Measured dynamic power is 4.0 W against 31.2 W for a 16-core Ryzen 9 9950X; speed-ups of two to three orders of magnitude at small sizes narrow to compute-time parity at n=16, p=32, where energy per QAOA execution is lower by approximately 13x. The architecture retains the fundamental O(2^n) memory scaling of exact state-vector simulation, limiting the current single-board implementation to approximately 17–18 qubits. We have therefore developed a theoretical and architectural multi-FPGA extension that partitions the state vector across devices and minimises communication to mixer operations spanning device partitions. Physical multi-board implementation and validation remain, particularly for communication overhead, scaling efficiency, and end-to-end energy consumption. These results motivate energy as an additional resource axis for evaluating classical QAOA baselines.</p>
+    </details>
+
+  </div>
+</details>
+
           <div class="ag-row ag-break"><span class="ag-time">12.30&ndash;14.00</span><span class="ag-main">Lunch</span></div>
 
           <details class="ag-talk">
