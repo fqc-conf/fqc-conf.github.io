@@ -847,6 +847,23 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .ag-talk[open] > summary { background: var(--paper-2); }
 .ag-talk > summary:focus-visible { outline: 2px solid var(--accent-2); outline-offset: -2px; }
 
+.ag-cue {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  white-space: nowrap;
+}
+.ag-cue-label {
+  font-family: var(--mono);
+  font-size: .64rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+.ag-cue .ag-chevron { align-self: auto; }
+
 .ag-chevron {
   align-self: center;
   width: 8px; height: 8px;
@@ -880,9 +897,60 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   }
   .ag-time { font-size: .72rem; }
   .ag-theme { align-self: start; margin-top: .1rem; }
-  .ag-chevron { position: absolute; right: 1.1rem; top: 1.15rem; }
+  .ag-talk > summary { padding-right: 6rem; }
+  .ag-cue { position: absolute; right: 1rem; top: 1.05rem; }
   .ag-body { padding: 0 1rem 1.1rem 1rem; }
   .agenda-day-head { padding: .8rem 1rem; }
+}
+
+/* ============================================================
+   Lightning talks
+   ============================================================ */
+
+.lt-list {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--paper);
+}
+.lt-talk > summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: .95rem 1.35rem;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+  list-style: none;
+  transition: background-color .15s var(--ease);
+}
+.lt-list > :first-child > summary { border-top: none; }
+.lt-talk > summary::-webkit-details-marker { display: none; }
+.lt-talk > summary:hover,
+.lt-talk[open] > summary { background: var(--paper-2); }
+.lt-talk > summary:focus-visible { outline: 2px solid var(--accent-2); outline-offset: -2px; }
+.lt-talk[open] .ag-chevron { transform: rotate(-135deg); }
+
+.lt-main { display: flex; flex-direction: column; gap: .12rem; min-width: 0; }
+.lt-who { font-size: .95rem; }
+.lt-name { font-weight: 600; color: var(--ink); }
+.lt-aff { color: var(--text-mute); }
+.lt-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-soft);
+}
+.lt-body {
+  padding: 0 1.35rem 1.25rem;
+  color: var(--text-soft);
+}
+.lt-body p { margin: .25rem 0 0; max-width: 66ch; }
+
+@media (max-width: 640px) {
+  .lt-talk > summary { padding: .9rem 6rem .9rem 1rem; position: relative; }
+  .lt-talk > summary .ag-cue { position: absolute; right: 1rem; top: 1rem; }
+  .lt-body { padding: 0 1rem 1.1rem; }
 }
 
 /* ============================================================

@@ -110,7 +110,8 @@
         <li><a href="#about">About</a></li>
         <li><a href="#speakers">Speakers</a></li>
         <li><a href="#program">Program</a></li>
-        <li><a href="#venue">Venue</a></li>
+        <li><a href="#lightning">Lightning talks</a>
+        <a href="#venue">Venue</a></li>
         <li><a href="#register">Register</a></li>
         <li><a href="#organisers">Organisers</a></li>
       </ul>
@@ -380,12 +381,12 @@
         </div>
         <div class="agenda-list">
 
-          <details class="ag-talk">
+          <details class="ag-talk" open>
             <summary>
               <span class="ag-time">10.00&ndash;10.45</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Gerard Milburn</span> <span class="ag-aff">STFC</span></span><span class="ag-title">The Irony Trap Quantum Computer</span></span>
               <span class="ag-theme">foundations</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Building a useful quantum computer requires controllably generating very complex quantum states of many physical degrees of freedom &mdash; the number of physical qubits accessible in hardware. Are we sufficiently confident of quantum theory that this will not surface new fundamental physical limits? Slagle and Preskill (<em>Phys. Rev. A</em> 108, 012217, 2023) suggested that there may be surprises in store. More recently Palmer (<em>PNAS</em> 123(12)) has proposed another fundamental limit. In any case, the failure to reconcile quantum and gravity should give us pause. In this talk I will review these proposals. It would be deeply ironic if our attempts to build a quantum computer tested quantum mechanics to destruction.</p></div>
           </details>
@@ -395,7 +396,7 @@
               <span class="ag-time">10.45&ndash;11.30</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">L&eacute;o Monbroussou</span> <span class="ag-aff">University of Edinburgh</span></span><span class="ag-title">Subspace-Preserving Quantum Machine Learning</span></span>
               <span class="ag-theme">machine learning</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Variational quantum circuits are among the most promising candidates for near-term quantum applications, yet fundamental questions remain open regarding their trainability, their capacity to evade classical simulation, and their scalability. Subspace-preserving algorithms, which exploit symmetries of the computation to restrict the dynamics to a fixed sector of the Hilbert space, offer a setting in which these questions become more tractable. This talk presents subspace-preserving quantum machine learning algorithms, together with the theoretical guarantees currently available and what remains to be understood, with particular emphasis on particle-number-preserving photonic platforms and on how hardware-aware algorithm design may help deliver quantum utility in the near term.</p></div>
           </details>
@@ -409,7 +410,7 @@
               <span class="ag-time">14.00&ndash;14.45</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Alexandru Baltag &amp; Sonja Smets</span> <span class="ag-aff">University of Amsterdam</span><span class="ag-tag">Joint</span></span><span class="ag-title">Reasoning about Knowledge in the Quantum Domain</span></span>
               <span class="ag-theme">quantum logic</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Our work integrates the methods coming from epistemic logic into the work on dynamic logics for the specification and verification of quantum programs. Our logical system, Q-DEL, is a quantum version of dynamic epistemic logic that allows us to reason about both classical and quantum information in multi-agent interactions.</p></div>
           </details>
@@ -418,7 +419,7 @@
             <summary>
               <span class="ag-time">14.45&ndash;15.30</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Carmen Constantin</span> <span class="ag-aff">University College London</span></span><span class="ag-title">The Three Level Hierarchy of State Independent Contextuality</span></span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>This talk follows up on a conjecture I presented during a lightning talk at last year's FQC. I will start by giving an introduction to the three level hierarchy of contextuality introduced by Abramsky and Brandenburger. I will then review some known examples of state independent constructions which occupy the top and bottom levels of this hierarchy - those of probabilistic and strong contextuality. To conclude I will give an overview of a recent construction which exhibits state independent logical contextuality, thus supplying the last piece of the state independent contextuality landscape.</p></div>
           </details>
@@ -441,7 +442,7 @@
               <span class="ag-time">10.00&ndash;10.45</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Hilbert Kappen</span> <span class="ag-aff">Radboud &middot; Flatiron</span></span><span class="ag-title">Approximate inference for tensor networks using Generalized Belief Propagation</span></span>
               <span class="ag-theme">tensor networks</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Tensor networks provide an efficient representation for quantum states and are one of the methods of choice to simulate quantum systems on classical computers. For large or highly entangled quantum systems exact computation of quantum statistics is intractable. Recent years have seen a growing interest in the use of belief propagation &mdash; an algorithm originally introduced for performing statistical inference on graphical models &mdash; for approximate estimation. Here, we detail how to apply generalized belief propagation (GBP) &mdash; where messages are passed within a hierarchy of overlapping regions of the tensor network &mdash; to approximately contract tensor networks and obtain accurate results. The original belief propagation algorithm is a corner case of this approach. We implement GBP for a range of two- and three-dimensional, infinite and finite tensor networks, and show that GBP is typically more accurate than BP and its loop corrections, making it a promising new approach for tensor networks.</p></div>
           </details>
@@ -451,7 +452,7 @@
               <span class="ag-time">10.45&ndash;11.30</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Andrew Green</span> <span class="ag-aff">UCL</span></span><span class="ag-title">Tensor Networks for Quantum Software and Simulation</span></span>
               <span class="ag-theme">tensor networks</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Tensor networks provide one of the most efficient ways of simulating quantum systems on classical computers. Because of this, they are the benchmark for claims of quantum advantage. They can also be used to structure quantum code, building upon understanding developed in the classical context and allowing identification of potential quantum advantage.</p></div>
           </details>
@@ -465,7 +466,7 @@
               <span class="ag-time">14.00&ndash;14.45</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Bas Spitters</span> <span class="ag-aff">Aarhus University</span></span><span class="ag-title">Verifying categorical quantum computation</span></span>
               <span class="ag-theme">categorical QC</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Testing, used in ordinary software engineering, is much harder for quantum computation due to the measurement problem. Formal software verification is a more attractive alternative. I will present a practical framework for the verification of categorical quantum programs and for compiler verification.</p></div>
           </details>
@@ -475,7 +476,7 @@
               <span class="ag-time">14.45&ndash;15.30</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Martha Lewis</span> <span class="ag-aff">University of Amsterdam</span></span><span class="ag-title">Quantum-inspired Techniques for Compositional Generalization in Modelling Language and Vision</span></span>
               <span class="ag-theme">categorical QC</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Large-scale neural network models combining text and images have made incredible progress in recent years. However, it remains an open question to what extent such models encode compositional representations of the concepts over which they operate, such as correctly identifying &lsquo;red cube&rsquo; by reasoning over the constituents &lsquo;red&rsquo; and &lsquo;cube&rsquo;. I will show that key vision-language models like CLIP can struggle with this sort of task, and introduce an extension of quantum-inspired compositional distributional semantic models to modelling language in a visual context. These models can outperform CLIP, particularly when novel disentangled architectures are introduced.</p></div>
           </details>
@@ -499,7 +500,7 @@
               <span class="ag-time">10.00&ndash;10.20</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Oleksiy Kondratyev</span> <span class="ag-aff">SW7 &middot; Imperial</span></span><span class="ag-title">Practical Applications of Quantum Machine Learning in Finance</span></span>
               <span class="ag-theme th-fin">finance</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>We explore practical applications of QML models based on parameterised quantum circuits. The expressive power of quantum feature maps makes QML a viable alternative to classical machine learning models. The use cases cover fraud detection, recession prediction, graduation testing and signal detection for investment strategies.</p></div>
           </details>
@@ -509,7 +510,7 @@
               <span class="ag-time">10.20&ndash;10.40</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Fern Watson &amp; Charlie Markham</span> <span class="ag-aff">FCA</span><span class="ag-tag">Joint</span></span><span class="ag-title">Quantum Computing Applications in Financial Services</span></span>
               <span class="ag-theme th-fin">finance</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Quantum computing is attracting growing interest across financial services, but separating near-term opportunities from long-term expectations remains a challenge. Drawing on the FCA's recent research, this talk explores where quantum technologies may create genuine value for firms and markets, and what industry and regulators can do today to prepare. The session focuses on three application areas particularly relevant to financial services &mdash; optimisation, machine learning, and stochastic modelling &mdash; which underpin portfolio construction, risk management, pricing, and forecasting. It also examines practical considerations for adoption, including the regulatory questions that may emerge as capabilities mature, and how collaboration between industry, academia, technology providers, and regulators can help ensure innovation is both responsible and beneficial.</p></div>
           </details>
@@ -522,7 +523,7 @@
               <span class="ag-time">11.30&ndash;11.50</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Christoph Gorgulla &amp; Mohammad Ghazi Vakili</span> <span class="ag-aff">St.&nbsp;Jude &middot; QC&nbsp;Ware</span><span class="ag-tag">Joint</span></span><span class="ag-title">Quantum-computing-enhanced algorithm unveils potential KRAS inhibitors</span></span>
               <span class="ag-theme th-drug">drug discovery</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>We introduce a quantum–classical generative model for small-molecule design, specifically targeting KRAS inhibitors for cancer therapy. We apply the method to design, select and synthesize 15 proposed molecules that could notably engage with KRAS for cancer therapy, with two holding promise for future development as inhibitors. This work showcases the potential of quantum computing to generate experimentally validated hits that compare favorably against classical models. (<em>Nature Biotechnology</em>, 2025).</p></div>
           </details>
@@ -532,7 +533,7 @@
               <span class="ag-time">11.50&ndash;12.10</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Guillermo Garc&iacute;a-P&eacute;rez</span> <span class="ag-aff">Algorithmiq</span></span><span class="ag-title">Quantum-Enabled Cancer Drug Discovery &amp; Development</span></span>
               <span class="ag-theme th-drug">drug discovery</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Algorithmiq was the sole winner of the $2M Wellcome Leap &ldquo;Quantum for Bio&rdquo; prize, using up to 100 qubits on IBM hardware to simulate a photodynamic-therapy cancer drug now in Phase&nbsp;II trials &mdash; a scalable path toward quantum advantage in drug discovery. <a href="https://algorithmiq.fi/news/algorithmiq-wins-2-million-wellcome-leap-prize-for-quantum-enabled-cancer-drug-discovery-development/" target="_blank" rel="noopener">Read more &#8599;</a></p></div>
           </details>
@@ -542,7 +543,7 @@
               <span class="ag-time">12.10&ndash;12.30</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Chen-Yu Liu</span> <span class="ag-aff">Quantinuum</span></span><span class="ag-title">Toward Generative Quantum Utility</span></span>
               <span class="ag-theme th-prac">making practical</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Quantum generative models promise potential computational advantages, but realizing practical utility requires understanding the interplay between data, algorithms, and hardware. In this talk, we will present a series of recent works that introduce a framework for identifying datasets suited to quantum generative models, analyze the impact of hardware constraints on their performance, and demonstrate these ideas in scientific generative modeling. Together, these results outline a path toward practical generative quantum utility.</p></div>
           </details>	
@@ -554,7 +555,7 @@
               <span class="ag-time">14.00&ndash;14.20</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Esperanza Cuenca-G&oacute;mez</span> <span class="ag-aff">NVIDIA</span></span><span class="ag-title">Accelerated Quantum Supercomputing</span></span>
               <span class="ag-theme th-prac">making practical</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>Quantum computing is reaching an inflection point where progress toward useful, error-corrected devices at scale depends not only on the quantum hardware, but also on the classical infrastructure required for simulation, hybrid quantum-classical algorithms, control, calibration, and quantum error correction. This talk presents NVIDIA's Accelerated Quantum Supercomputing &mdash; a system-level approach that integrates quantum processors with AI supercomputing and GPU-accelerated classical resources &mdash; and highlights the role of AI and accelerated computing in quantum error correction, hardware design, and hybrid algorithms, with recent results from collaborations with supercomputing centres and industry partners.</p></div>
           </details>
@@ -564,7 +565,7 @@
               <span class="ag-time">14.20&ndash;14.40</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Alexis Ralli &amp; Tim Weaving</span> <span class="ag-aff">QMatter</span><span class="ag-tag">Joint</span></span><span class="ag-title">Practical Quantum Computing: Compression, Co-Design, and a Path to Useful Applications</span></span>
               <span class="ag-theme th-prac">making practical</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
             </summary>
             <div class="ag-body"><p>As quantum hardware advances, the focus is shifting toward making quantum algorithms practical on real devices. This talk introduces QMatter's work on quantum compression and resource-efficient algorithm design, before highlighting a collaborative project with NVIDIA, TUM, UCL, and IQM that applies quantum software&ndash;hardware co-design to a biochemical problem. We conclude by sharing our perspective on promising directions for the field and the opportunities ahead as quantum technologies mature.</p></div>
           </details>
@@ -574,7 +575,7 @@
               <span class="ag-time">14.40&ndash;15.00</span>
               <span class="ag-main"><span class="ag-who"><span class="ag-name">Dimitrios Emmanoulopoulos</span> <span class="ag-aff">Barclays</span></span><span class="ag-title ag-tbc">Title to be confirmed</span></span>
               <span class="ag-theme th-prac">making practical</span>
-              <span class="ag-chevron" aria-hidden="true"></span>
+              <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
            </summary>
            <div class="ag-body"><p class="ag-tbc-note">Abstract to be confirmed.</p></div>
           </details>
@@ -588,12 +589,171 @@
   </div>
 </section>
 
+<section id="lightning" class="section section-lightning" aria-labelledby="lightning-title">
+  <div class="container">
+
+    <header class="col-head">
+      <p class="section-label">04 / Lightning talks</p>
+      <h2 id="lightning-title" class="section-title">Twenty five-minute talks.</h2>
+    </header>
+
+    <p class="partners-note">
+      Short talks from PhD students and early-career researchers, spread across three
+      sessions in the programme above. Select a talk to read its abstract.
+    </p>
+
+    <div class="lt-list">
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Howard Su</span> <span class="lt-aff">Imperial College London</span></span><span class="lt-title">Scalable Quantum Machine Learning via Multi-layer Fully-Connected Variational Quantum Circuits</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>We propose Multi-Layer Fully-Connected Variational Quantum Circuits (FC-VQC), a modular framework that decomposes high-dimensional inputs into fixed-size local VQC blocks connected by deterministic block-mixing rules. This design keeps each quantum computation local while allowing the number of trainable quantum parameters to scale linearly with input dimension.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Freddie Burns</span> <span class="lt-aff">UCL</span></span><span class="lt-title">Mean-field ansätze for quantum selected configuration interaction</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Sampling algorithms aim to find subspaces of a Hamiltonian that yield accurate eigenvalues by measuring an ansatz many times. These ansätze should be complete, covering the target support; precise, covering only the target support; efficient, requiring few shots; and shallow, reducing the effect of noise in NISQ devices. This work pools measurements from an ensemble of ansätze, each produced by encoding a spin-broken mean-field determinant, rotating into a spin-pure basis, and projecting into a target spin state. We benchmark against IBM’s LUCJ ansatz on small hydrogen systems, in both simulation and on hardware, showing shallower circuits and improved sampling efficiency while retaining full ground-state support.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Naivasha Williams</span> <span class="lt-aff">UCL</span></span><span class="lt-title">Hermitian Matrix Product Operators on Quantum Computers</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>MPOs are nonunitary; current state-of-the-art methods favour block-encoding for implementation. However, utility is limited by circuit depth and ancilla overhead on current hardware. We propose a new, more hardware efficient implementation of Hermitian MPOs and show that both circuit width and depth are significantly reduced for the Transverse Field Ising Model.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Syed Mujtaba Haider</span> <span class="lt-aff">University of Pavia</span></span><span class="lt-title">Does Quantum GAN Augmentation Help? A Controlled Brain MRI Benchmark</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Medical image classification is frequently constrained by limited labeled data, motivating generative augmentation, and quantum generative models have recently been proposed for this role, often reported as delivering accuracy gains. Such claims, however, usually rest on single training runs, compare quantum and classical generators at unmatched parameter budgets, and leave unspecified the data regime in which any advantage is supposed to appear. We present a controlled benchmark to isolate the contribution of a quantum generator to brain MRI augmentation. Images are encoded into a KL-regularized latent space; within that space we train a conditional Wasserstein GAN with gradient penalty whose generator is either a variational quantum circuit or a classical network of near-identical parameter count (1648 versus 1632). All remaining components; encoder, decoder, critic, conditioning scheme, optimizer, and training schedule is held fixed, so the generator family is the only variable. Synthetic samples are decoded to image space and used to augment a pretrained classifier across labeled data fractions from 5% to 100%. Each configuration is repeated over eight random seeds and compared with paired significance testing under multiple comparison correction, complemented by intra-set diversity measurements and analyses of the latent distributions of real and generated samples. Across every data fraction, no augmentation variant significantly outperforms training on real data alone, and quantum and classical generators are statistically indistinguishable. Where a nominal low-data benefit appears, it behaves as regularization rather than faithful data expansion: generated samples lie off the real data distribution and are severely mode collapsed exactly in the regime where additional data would matter most, and the quantum generator is no more diverse than its classical counterpart. We argue that parameter matching, seed replication, and distributional diagnostics should be minimum requirements for claims of quantum advantage in generative augmentation, and release our protocol as a reproducible open testbed.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Theodor Iosif</span> <span class="lt-aff">UCL</span></span><span class="lt-title">Graph Neural Networks on Quantum Computers: Trainability and Classical Simulability</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Graph Neural Networks (GNNs) have shown promise in solving complex graph-based optimization problems, with implementations on both classical and quantum computers. Whilst promising better scalability with the problem size thanks to the complex structure of Hilbert spaces, quantum GNNs are prone to untrainability; in particular, the barren plateau problem. In this work, we provide a gradient analysis for a specific type of quantum GNN. As such, the approximate bounds and expected trend of the gradient variance indicate efficient trainability for problems concerned with classical graph size scalability. This comes at the cost of a barren plateau in the subsystem encoding the nodes' features. Our results are validated by simulated experiments on two benchmarks. Furthermore, we comment on possible regimes of advantage of the model. At the circuit level, there is a trade-off; advantage can be exponential in either space or time, or polynomial in both. This trade-off is significantly impacted by the classical compilation time of the circuit (the input problem). Therefore, a low-rank dequantization analysis adds constraints to the types of graphs the quantum GNN can provide an advantage for.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Ivan Shalashilin</span> <span class="lt-aff">UCL</span></span><span class="lt-title">Boosting Quantum Classifiers with Tensor Networks</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Tensor networks, originally developed in quantum physics to describe many-body systems, have recently attracted interest in classical and quantum machine learning, following the seminal work of Stoudenmire and Schwab. One application is classification: encoding image data as matrix product states (MPS) with fixed bond dimension yields a shallow, low-qubit-count multiclass quantum classifier. We propose a classifier that reframes binary classification as a quantum state discrimination problem, in which the goal is to find the optimal observable for distinguishing two quantum states. Each class is encoded as a normalized density matrix—the weighted average of its constituent datastates—and the optimal observable is obtained by diagonalising the difference between the two class density matrices. Accuracy is improved by iteratively reweighting the density matrices, in a manner similar to AdaBoost or SVMs, and multiclass problems are handled via a one-vs-rest scheme. Since the classifier requires no loss function or gradient-based optimisation, it sidesteps trainability issues such as barren plateaus, a common concern in quantum machine learning. Diagonalization is performed efficiently using a tensor-network Lanczos algorithm, and we show that most of the classifier's performance is captured by a truncated observable built from the largest-weight eigenvectors. Because the data is MPS-encoded, the classifier naturally takes the form of a matrix product operator (MPO), whose bond dimension can be truncated to trade off accuracy for efficiency. We further extend our boosting approach to stacking (Wright et al.), training a new classifier on the outputs of several MPO classifiers. This approach achieves 99.25%/98.5% train/test accuracy on standard MNIST handwritten digits using just 8 qubits. We also report inference results on the IBM Heron quantum computer at the NQCC, achieving &gt;96% test accuracy on a 4 class MNIST batch using circuits with O(100-1000) depth and two qubit gate count.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Peter Martin</span> <span class="lt-aff">Brunel University London</span></span><span class="lt-title">Cylindrical Matter: A Beyond-Quantum System for Efficient Classical Simulation</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Even simplified models of quantum many-body systems can be difficult to analyse, so one may wonder if there is benefit to exploring how beyond-quantum descriptions may fare. We propose and investigate a beyond-quantum many-body system that is based on hypothetical particles called "cylindrical bits" first introduced in Atallah et al. These particles are represented as a cylinder of vectors of R^3, somewhat analogously to how the Bloch sphere represents qubits. By considering a lattice of cylindrical bits interacting in continuous time with certain permitted measurements, we demonstrate the existence of "cylindrical matter" that yields valid probabilities, however large the system is or however long it runs. We provide efficient classical simulation algorithms (and local hidden variable models) for pure entangled quantum systems with diagonal gate interactions, by representing them as separable states, for which no previous efficient classical simulation was known. An example of the application is simulating pure Ising interactions algebraically decaying faster than r^(-3D/2).</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Tommy Williams</span> <span class="lt-aff">University of Edinburgh</span></span><span class="lt-title">Sheaf-Theoretic Preparation Contextuality</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>We introduce a preparation-dual notion of contextuality as an obstruction to stochastic extension. Preparation contextuality arises when locally specified preparation statistics cannot be extended to a single global response matrix compatible with all source contexts. We identify structural and compatibility conditions on admissible extensions and illustrate the framework with a quantum-mechanical example.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">JenYu Chang</span> </span><span class="lt-title">Scalable Quantum Optimisation via Generative Circuit Transfer</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Designing sequences with minimal self-interference is a core challenge in radar and communications engineering, yet finding optimal solutions becomes exponentially harder as the sequence grows longer. Quantum-assisted methods offer a promising path to faster solutions, but face a fundamental scalability barrier: circuits must be redesigned and grow deeper for each new problem size, making them impractical at scale. Here we introduce TileGQE-MTS, a hybrid quantum–classical framework that removes this barrier. A Generative Quantum Eigensolver (GQE) is trained once on a small system; symmetry- aware feature tiling then transfers the learned quantum structure to the tested larger instances without retraining, keeping the number of learned feature templates fixed. These transferred features seed a GPU-accelerated Memetic Tabu Search (MTS) that efficiently refines solutions on classical hardware. Bench- marks across a range of problem sizes show that TileGQE-MTS achieves the fastest median time-to-solution (TTS) and up to 2.4× speedup over classical MTS alone, with consistent ground-state reliability—outperforming the tested baselines over the evaluated range, both classical and prior quantum-seeding baselines. The fixed circuit depth makes TileGQE-MTS designed with near-term hardware constraints in mind, suggesting a possible route toward scalable hybrid quantum optimization</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Joseph Hankon</span> <span class="lt-aff">University of Southampton</span></span><span class="lt-title">Latent Quantum Image Representation with Shared Quantum Decoding</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Quantum implicit neural representations (QINRs) are a recent approach to express image data using quantum circuits, drawing on ideas from classical implicit neural representations. In this framework, a quantum neural network learns a mapping from spatial coordinates to corresponding signal values, querying the circuit repeatedly to reconstruct an image point by point. Although effective, existing QINR methods are best understood as quantum-enhanced classical machine learning: the quantum circuit serves as a rich feature map that improves classical implicit representation techniques, but the resulting quantum states do not themselves encode meaningful information about the entire image for further quantum processing. My work introduces an alternative framework that aims to produce truly quantum-native image representations. Rather than querying a circuit repeatedly per coordinate, the aim is to construct a single latent quantum state that uniquely represents a given image from a dataset. This latent state is then passed through a trainable universal quantum decoder, shared across the entire dataset, which uses query coordinates to map the quantum representation back into a reconstructed image. In contrast to existing QINR approaches, where each image is tied to its own bespoke circuit, this framework encodes the full identity of an image within a single quantum state, accessible through a common decoder. Beyond reconstruction, this framework raises open questions that I intend to explore. Can the latent quantum state serve directly as a meaningful representation for downstream tasks such as classification or denoising, and whether the trained decoder can support a generative mapping, producing novel image samples from sampled or interpolated latent states. I hope to use this framework as a starting point for discussing how data-driven representation learning fits within the structural constraints of quantum information.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Amana Liaqat</span> <span class="lt-aff">Qoro Quantum</span></span><span class="lt-title">Scaling Parallelised Sample Based Quantum Diagonalization Using Divi</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>SQD uses quantum circuits as stochastic samplers to bypass classical bottlenecks. To simulate large molecules, our Divi software parallelizes LASSQD workloads across QPUs by fragmenting the Hamiltonian and running configuration recovery. We demonstrate processing a molecule previously too large for these methods using this fragmented approach, and highlight past work accelerating QAOA sampling.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Väinö Mehtola</span> <span class="lt-aff">VTT Technical Research Centre of Finland</span></span><span class="lt-title">Anticoncentration and Fourier Visibility in Two-Local IQP Born Machines</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Anticoncentration and Fourier Visibility in Two-Local IQP Born Machines Classically trained IQP Born machines deploy as quantum samplers; L2 anticoncentration supports sampling-advantage routes. Using the critical-rank framework and S(G), we prove L2 anticoncentration coexists with low-weight Fourier visibility across several families. Rare low-rank sets show logarithmic degree can fail. We derive half-shell criteria and random-regular/shortcut thresholds. These are initialization results only.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Steph Foulds</span> <span class="lt-aff">University of Strathclyde</span></span><span class="lt-title">Lazy Quantum Walks with Native Multiqubit Gates</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Quantum walks, the quantum analogue of the classical random walk, have been shown to underpin quantum algorithms for fluid dynamics. Lazy quantum walks, performed on graphs with self loops, allow for the zero velocity state required in the lattice Boltzmann method for fluid simulation and more generally have been shown to decrease search time compared to standard quantum walks. We propose the quantum half-adder gate method for quantum walks as a useful and transparent benchmark algorithm, specifically to compare native two-qubit gate and native multiqubit gate implementations. Neutral atom hardware is a promising choice of platform for implementing quantum walks due to its ability to implement native multiqubit (greater than 2-qubit) gates and to dynamically re-arrange qubits. Using detailed realistic error modelling for multiqubit Rydberg gates via two-photon adiabatic rapid passage, we present the gate sequences and predicted final state fidelities for some small one dimensional quantum walks, including lazy quantum walks; lazy quantum walks include a rest state, which is needed for quantum walks for fluid simulation. Our simulations pinpoint the sweet spot where native multiqubit gates provide an advantage compared with decomposing the gate into multiple smaller higher fidelity gates - specifically we conclude that (prior to error correction) native three- and four-qubit gates and mid-circuit qubit array rearrangement is required for the implementation of four qubit and larger quantum walks on neutral atom hardware.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Tilen Limback-Stokin</span> <span class="lt-aff">University College London</span></span><span class="lt-title">QuCLIP: Towards Compositional Vision-Language Representations on Near-Term Quantum Hardware</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Large vision-language models struggle to capture hierarchical linguistic relations, often acting as unstructured bag-of-words models due to their reliance on dense attention mechanisms. Addressing this classically requires massive data and parameter scaling, while existing quantum machine learning models are not explicitly designed to handle the structures present in natural language. To bridge this gap, we propose QuCLIP, a quantum vision-language model that explicitly encodes linguistic structure using a specialized Combinatory Categorial Grammar (CCG) ansatz. To enable practical execution on near-term quantum devices, this ansatz restricts entanglement to adjacent physical positions and replaces costly Bell tests with unitaries via map-state duality. Furthermore, quantum feature maps are utilized for image encoding to minimize circuit depth. We evaluate QuCLIP on compositional vision-language benchmarks across ideal simulations, noisy emulations, and physical QPUs on IBM Kingston, Quantinuum H2, IonQ Forte 1, and IQM Emerald. On the SVO-Swap subset, noiseless simulation achieves up to 84.21% accuracy, while execution on physical IBM Kingston hardware retains 54.74% accuracy. Under a 400-shot Destructive SWAP-test regime, emulated runs reach 67.37% (Fake Kingston) and 61.05% (IQM Emulator), compared to 49.47% on IQM Emerald hardware. On a high-margin evaluation subset, QuCLIP retains 100% of the original accuracy in noiseless conditions, up to 60.0% on IonQ Forte 1 and 40.0% on IQM Emerald. These results establish a practical, hardware-efficient foundation for solving structured multimodal tasks on quantum devices. Moreover, this work does not rely on explicit error mitigation or heavy circuit optimisation, leaving significant room for performance gains.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Abhishek Sadhu</span> <span class="lt-aff">University of Birmingham</span></span><span class="lt-title">Adversarial Effects on Expressibility and Trainability in Distributed Variational Quantum Algorithms</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Distributed quantum algorithms offer a promising pathway to scale variational quantum algorithms beyond the constraints of noisy intermediate-scale quantum hardware. However, existing approaches implicitly assume a trusted entanglement-sharing layer across quantum processors. We show that this assumption introduces a fundamental vulnerability: adversarial perturbations of shared entanglement induce structured gate-level noise that directly impacts quantum learning. We develop a framework that maps entanglement-level perturbations to gate-level noise via an explicit Kraus representation. To quantify their impact, we introduce Kraus expressibility, a metric that generalizes unitary expressibility to noisy quantum channels. We then establish a trade-off between Kraus expressibility and trainability of noisy quantum circuits through gradient variance analysis. Our analysis reveals that an adversary can manipulate Kraus expressibility to maintain sufficiently large cost gradients (avoiding barren plateaus) while systematically biasing optimization toward incorrect solutions. We validate these findings through numerical simulations, demonstrating adversarial degradation of expressibility and trainability.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Solomon Hurtado</span> </span><span class="lt-title">When Measurement Stops: Can Quantum Coherence Re-Emerge?</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Quantum measurement is usually discussed in terms of how interference is lost when information distinguishing alternative states becomes available. This raises a converse foundational question: when measurement or distinguishability is removed, under what conditions can quantum coherence re-emerge? This contribution considers the important distinction between three situations that can easily be conflated: an unknown classical mixture, a decohered quantum state, and a genuinely coherent superposition. I am particularly interested in whether removing measurement simply permits the evolution already predicted by standard quantum mechanics, or whether there could be experimentally identifiable conditions in which coherence between distinguishable states recovers or grows in a way that deserves further investigation. The question can be formulated operationally through observable quantities such as interference visibility and off-diagonal elements of the density matrix, allowing the discussion to move from interpretation toward potentially testable predictions. This also raises a broader question relevant to quantum computing: what exactly must be preserved, removed, or restored for quantum possibilities to remain computationally accessible? This is an exploratory foundational question rather than a claim of a completed theory. My purpose would be to invite critical discussion, identify relevant existing work, and better understand how this question fits within current quantum foundations.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Theo Yianni</span> <span class="lt-aff">Royal Holloway, University of London</span></span><span class="lt-title">Bounding Ontological Dimension via Approximate Sparsity Pattern</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>It is known from Hardy's Excess Baggage Theorem that the presence zero-valued outcome probabilities in a quantum prepare-and-measure experiment on an ideal single-qubit system can be used to prove an unbounded ontological excess baggage. In this work, we extend this to realistic experiments on single-qubit systems with approximate zero-valued probabilities to prove a lower bound on this excess baggage. Furthermore, we use a similar technique on prepare-and-measure experiments on q-qubit systems to prove a doubly-exponential in q lower bound on ontological excess baggage with a noise tolerance.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Aishwarya Vishwakarma</span> <span class="lt-aff">University of Geneva</span></span><span class="lt-title">When Does Calibration-Aware Compilation Transfer to Quantum Hardware? A Three-Processor QAOA Study of Ranking, Drift, and Refresh</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Calibration-aware compilation uses device calibration data to guide circuit placement and compilation, but its practical value depends on whether the preferences inferred from a calibration snapshot remain predictive when circuits are executed on real, evolving hardware. In this work, I study this question experimentally using QAOA circuits executed on three IBM Heron r2 processors, comprising 823,296 hardware shots. Rather than considering compilation quality only through average performance, I focus on whether the ranking of candidate compilation choices transfers to hardware, how that relationship changes with calibration drift, and when refreshed calibration information becomes necessary. The study uses pre-specified decision rules and reproducible execution and analysis procedures to distinguish genuine hardware-transfer behaviour from effects of finite sampling and changing device conditions. More broadly, the results address a practical question for near-term quantum computing: when can calibration information be treated as actionable evidence for hardware-aware algorithm design, and when does it cease to be predictive?</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">George Umbrarescu</span> <span class="lt-aff">UCL</span></span><span class="lt-title">SyQMA: A memory-efficient, symbolic and exact universal simulator for quantum error correction</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>The classical simulation of universal quantum circuits is crucial both fundamentally and practically for quantum computation. We propose SyQMA, a simulator with several convenient features, particularly suited for quantum error correction (QEC). SyQMA simulates universal quantum circuits with incoherent Pauli noise and computes exact expectation values and measurement probabilities as symbolic functions of circuit parameters: rotation angles, measurement outcomes, and noise rates. This simulator can sample measurement outcomes, enabling the simulation of dynamic quantum programs where circuit composition depends on prior measurement outputs. For QEC, it performs circuit-level maximum-likelihood decoding, provides exact symbolic expressions for logical error rates, and verifies the fault distance of fault-tolerant (FT) stabiliser and magic state preparation protocols. These features are enabled by an intuitive extension of stabiliser simulators, where each non-Clifford Pauli rotation and incoherent Pauli channel is compactly represented via auxiliary qubits and a modified trace. Representing the state requires only polynomial memory and time, while computing expectation values and measurement probabilities takes exponential time in the number of non-Clifford rotations and deterministic measurements, but only polynomial memory. The FT preparation of stabiliser and magic states, including the first stage of magic state cultivation, is analysed without approximations. We also exactly convert the disjoint error probabilities of a general multi-qubit Pauli channel to independent ones, a key step for creating and sampling from detector error models. The code is publicly available and open-source.</p></div>
+      </details>
+      <details class="lt-talk">
+        <summary>
+          <span class="lt-main"><span class="lt-who"><span class="lt-name">Amir Alizadeh</span> <span class="lt-aff">Nottingham Trent University</span></span><span class="lt-title">Energy-Aware and Scalable Classical Baselines for QAOA: A Measured FPGA State Vector Simulator</span></span>
+          <span class="ag-cue"><span class="ag-cue-label">Abstract</span><span class="ag-chevron" aria-hidden="true"></span></span>
+        </summary>
+        <div class="lt-body"><p>Computer Science, Nottingham Trent University, UK ² Department of Computer Science, Tokyo Metropolitan University, Japan Assessing the practical performance of the Quantum Approximate Optimisation Algorithm (QAOA) requires strong classical simulation baselines. Such baselines are typically characterised by runtime and memory requirements, while their energy cost receives substantially less attention. This work presents a measured FPGA-based statevector simulator specialised to the structure of QAOA and evaluates energy alongside computational performance. Rather than emulating arbitrary quantum gates, the architecture maps QAOA quantum part onto regular read–compute–write sweeps over a BRAM-resident state vector using a time-multiplexed fixed-point datapath. One structural optimisation exploits the exact invariance of the cost evolution under (��, ��) → (��,/������). By rescaling the cost values on the host and representing the resulting phase in turns rather than radians, modulo2�� range reduction on the FPGA reduces to fractional-bit selection. Thus, an algebraic property of QAOA removes the need for a dedicated range-reduction arithmetic block. The prototype runs at 320 MHz on a 28 nm Stratix V, validated against Qiskit Aer on MaxCut up to 16 qubits and 32 layers. Measured dynamic power is 4.0 W against 31.2 W for a 16-core Ryzen 9 9950X; speed-ups of two to three orders of magnitude at small sizes narrow to compute-time parity at n=16, p=32, where energy per QAOA execution is lower by approximately 13× (7.8× as a floor from the power ratio alone) — across a thirteen-year process gap. The advantage is architectural, not technological. The architecture retains the fundamental ��(2 ��)memory scaling of exact state-vector simulation, limiting the current single-board implementation to approximately 17–18 qubits. We have therefore developed a theoretical and architectural multi-FPGA extension that partitions the state vector across devices and minimises communication to mixer operations spanning device partitions. Physical multi-board implementation and validation remain, particularly for communication overhead, scaling efficiency, and end-to-end energy consumption. These results motivate energy as an additional resource axis for evaluating classical QAOA baselines</p></div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
 <section id="venue" class="section section-venue" aria-labelledby="venue-title">
   <div class="container">
 
     <div class="two-col venue-grid">
       <header class="col-head">
-        <p class="section-label">04 / Venue</p>
+        <p class="section-label">05 / Venue</p>
         <h2 id="venue-title" class="section-title">UCL School of Management.</h2>
       </header>
       <div class="col-body prose">
@@ -631,7 +791,7 @@
 <section id="register" class="section" aria-labelledby="register-title">
   <div class="container two-col">
     <header class="col-head">
-      <p class="section-label">05 / Register</p>
+      <p class="section-label">06 / Register</p>
       <h2 id="register-title" class="section-title">Register.</h2>
     </header>
     <div class="col-body prose">
@@ -679,7 +839,7 @@
 <section id="organisers" class="section section-organisers" aria-labelledby="organisers-title">
   <div class="container two-col">
     <header class="col-head">
-      <p class="section-label">06 / Organisers</p>
+      <p class="section-label">07 / Organisers</p>
       <h2 id="organisers-title" class="section-title">Organisers.</h2>
     </header>
     <div class="col-body">
@@ -707,7 +867,7 @@
 <section id="past" class="section section-past" aria-labelledby="past-title">
   <div class="container">
     <header class="section-head">
-      <p class="section-label">07 / Past editions</p>
+      <p class="section-label">08 / Past editions</p>
       <h2 id="past-title" class="section-title">A growing community.</h2>
     </header>
     <ol class="past-list" role="list">
@@ -733,7 +893,7 @@
 <section id="partners" class="section section-partners" aria-labelledby="partners-title">
   <div class="container">
     <header class="section-head">
-      <p class="section-label">08 / Partners</p>
+      <p class="section-label">09 / Partners</p>
       <h2 id="partners-title" class="section-title">In partnership with.</h2>
     </header>
 
@@ -806,7 +966,7 @@
 <section id="contact" class="section section-contact" aria-labelledby="contact-title" hidden>
   <div class="container two-col">
     <header class="col-head">
-      <p class="section-label">09 / Contact</p>
+      <p class="section-label">10 / Contact</p>
       <h2 id="contact-title" class="section-title">Get in touch.</h2>
     </header>
     <div class="col-body prose">
