@@ -1209,6 +1209,44 @@ a.past-where:hover .past-arrow { color: var(--accent); transform: translate(2px,
 }
 
 /* ============================================================
+   Group photo
+   ============================================================ */
+
+.group-photo {
+  margin: 0 0 clamp(1.75rem, 3.5vw, 2.5rem);
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--ink);
+  box-shadow:
+    0 1px 2px rgba(54, 26, 84, .04),
+    0 18px 48px -22px rgba(54, 26, 84, .35);
+}
+.group-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.group-photo figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2rem 1.5rem 1.05rem;
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: rgba(250, 250, 250, .92);
+  background: linear-gradient(to top,
+    rgba(54, 26, 84, .88) 0%,
+    rgba(54, 26, 84, .58) 45%,
+    transparent 100%);
+}
+
+@media (max-width: 600px) {
+  .group-photo figcaption { padding: 2rem 1rem .8rem; font-size: .66rem; }
+}
+
+/* ============================================================
    Venue photo
    ============================================================ */
 
