@@ -932,6 +932,15 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 
 /* muted text needs to invert on the dark sections to stay legible */
 .section-register,
+.footer-link {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .2s var(--ease);
+}
+.footer-link:hover { color: var(--accent); }
+
 .site-footer { --text-mute: #9f87be; }
 .section-register .section-title { color: var(--paper); }
 .section-register .section-label { color: var(--accent); }
