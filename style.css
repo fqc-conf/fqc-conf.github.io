@@ -385,6 +385,23 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   letter-spacing: -.005em;
 }
 
+.hero-meta dd a.hero-link {
+  text-decoration: underline;
+  text-decoration-color: rgba(250, 250, 250, .38);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color .2s var(--ease), text-decoration-color .2s var(--ease);
+}
+.hero-meta dd a.hero-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+.hero-link-arrow {
+  font-size: .68em;
+  margin-left: .22em;
+  vertical-align: .18em;
+}
+
 @media (max-width: 600px) {
   .hero-meta {
     grid-template-columns: 1fr;
@@ -1050,6 +1067,8 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   transition: color .2s var(--ease);
 }
 .partners-note a:hover { color: var(--accent); }
+.partners-note:has(+ .follow-cta) { margin-bottom: 1.1rem; }
+.follow-cta { margin: 0 0 clamp(2rem, 4vw, 3rem); }
 .org-list + .org-group-title,
 .speaker-grid + .org-group-title { margin-top: clamp(2.25rem, 4vw, 3rem); }
 .speakers-empty { padding: 1.5rem 0; font-size: 1rem; }
